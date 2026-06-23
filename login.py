@@ -19,8 +19,9 @@ def login():
             cursor = conn.cursor()
 
             cursor.execute(
-                "SELECT * FROM usuario WHERE usuario=%s AND password=%s",
-                (usuario, password)
+                "SELECT * FROM usuario"
+                #"SELECT * FROM usuario WHERE usuario=%s AND password=%s",
+                #(usuario, password)
             )
 
             resultado = cursor.fetchone()
