@@ -25,7 +25,8 @@ def login():
             )
 
             resultado = cursor.fetchone()
-
+            st.error(resultado)
+            
             conn.close()
 
             if resultado:
